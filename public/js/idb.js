@@ -12,4 +12,8 @@ request.onsuccess = function (event) {
     if (navigator.online) {
      loadTransaction();
     }
-  };
+};
+
+request.onerror = function(event) {
+    console.log(event.target.errorCode);
+};
